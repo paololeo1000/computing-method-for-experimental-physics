@@ -19,14 +19,15 @@ _description = 'Measure the releative frequencies of letters in a text file'
 # path di un file.
 def process(file_path):
     """Main processing method.
+    Basic sanity check: make sure that the file_argument points to an
+    existing text file.
+    Questa funzione permette di generare un errore se una condizione e' falsa,
+    la prima condizione verifica che il file e' un file di testo
     """
-    # Basic sanity check: make sure that the file_argument points to an
-    # existing text file.
-    # Questa funzione permette di generare un errore se una condizione è falsa,
-    # la prima condizione verifica che il file è un file di testo
     assert file_path.endswith('.txt')
-    # La seconda condizione verifica se il path specificato è un file regolare
-    # esistente oppure no.
+    """ La seconda condizione verifica se il path specificato e' un file
+    esistente oppure no.
+    """
     assert os.path.isfile(file_path)
 
     # Open the input file (note that we are taking advantage of context
@@ -34,7 +35,7 @@ def process(file_path):
 
     # Printa un messaggio d'informazione
     logging.info('Opening input file "%s"', file_path)
-    # Usiamo il with per rendere il codice più leggibile
+    # Usiamo il with per rendere il codice piu' leggibile
     with open(file_path) as input_file:
         # Crea una varibile con il testo del file
         data = input_file.read()
@@ -55,7 +56,7 @@ def process(file_path):
     # Loop over the input data (note the call to the lower() string method
     # that is casting everything in lower case).
 
-    # Legge lettera per lettera il testo in modalità lower e ogni volta che
+    # Legge lettera per lettera il testo in modalita' lower e ogni volta che
     # incontra una lettera nell'alfabeto aumenta di uno il valore della chiave
     # corrispondente.
     for ch in data.lower():
