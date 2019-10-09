@@ -1,0 +1,17 @@
+***OVERVIEW***
+
+The OS module in Python provides a way of using operating system dependent
+functionality.
+
+Thefunctions that the OS module provides allows you to interface with the
+underlying operating system that pyhton is running on - be that Windows, Mac or
+Linux.
+
+You can find important information about your location or about the process.
+
+In this post I will show some of these functions.
+
+*OS.PATH.JOIN()*
+Join one or more path components intelligently. This mthod concatenates path
+components with exactly one directory separator ('/') following each non-empty
+part except the last path component.
