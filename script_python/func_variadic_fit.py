@@ -13,6 +13,10 @@ popt, pcov = curve_fit(model, x, y)
 plt.errorbar(x, y, fmt='o')
 # Overlay the model without unpacking the best-fit parameters.
 plt.plot(x, model(x, *popt))
+plt.show()
+print(popt)
+print(pcov)
+
 
 # Compare with
 # mhat, qhat = popt

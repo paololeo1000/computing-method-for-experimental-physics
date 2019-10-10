@@ -1,0 +1,28 @@
+***SCIPY MODULE***
+
+SciPy is a collection of mathematical algorithms and convenience functions
+built on the NumPy extension of Python. It adds significant power to the
+interactive Python session by providing the user with high-level commands and
+classes for manipulating and visualizing data.
+
+*SCIPY.OPTIMIZE.CURVE_FIT*
+
+Use non-linear least squares to fit a function, f, to data.
+scipy.optimize.curve_fit(f, xdata, ydata, p0 = None, sigma = None,
+absolute_sigma = False, check_finite = True, bounds = (-inf, inf), method = None
+jac = None, **kwargs)
+f : The model function.
+xdata : The indipendent variable where the data is measured.
+ydata : The dependent data.
+p0 : (optional) Initial guess for parameters.
+sigma : (optional) Determines the uncertainty in ydata.
+absolute_sigma: (optional)
+check_finite : (optional)
+bounds : (optional) Lower and unpper bounds on parameters.
+method : (optional) Method to use for optimization.
+jac : (optional) Function with signature which computes the Jacobian matrix.
+kwargs : (optional) Keyword arguments passed to leastq fot method.
+RETURNS :
+	popt : (array) Optimal values for the parameters so that the sum of the
+	       squared residuals of f is minimized.
+	pcov : (2d array) The estimated covariance of popt.
