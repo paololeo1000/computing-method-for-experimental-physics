@@ -23,4 +23,4 @@ tv.owner = 'Joker' # Change the attribute - this time it does not work
 print('This tv belongs to {}'.format(tv.owner))
 
 
-"""NON FUNZIONA COME DOVREBBE, DA CHIEDERE"""
+""" FUNZIONA SOLO SE ESEGUITO CON PYHTON3 """
